@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="IRS">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-5.63523176784644E-07 -0.00108878063396016 0.0123412189762314"
+        rpy="0 0 0" />
+      <mass
+        value="0.0470666748718791" />
+      <inertia
+        ixx="1.3879830300452E-05"
+        ixy="-1.47891140862479E-11"
+        ixz="-5.39694360742728E-11"
+        iyy="4.36044503912351E-05"
+        iyz="6.54133856756778E-07"
+        izz="3.32416203172708E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IRS/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IRS/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-0.000196117482437084 0.0406588508218562 0.0329622926046537"
+        rpy="0 0 0" />
+      <mass
+        value="0.0538582887407261" />
+      <inertia
+        ixx="5.58983226686998E-06"
+        ixy="-2.45410121434724E-07"
+        ixz="4.96925374119221E-09"
+        iyy="2.81822837923353E-05"
+        iyz="-3.97956641866437E-07"
+        izz="2.89916984968694E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IRS/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IRS/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="guia"
+    type="prismatic">
+    <origin
+      xyz="0 -0.054291 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
